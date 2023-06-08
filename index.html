@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag and Drop Example</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1><span>Gray</span>dot <span>Technologies</span> Task</h1>
+
+  <div class="container">
+    <div class="draggable">
+      <div class="item-text" draggable="true">
+        <h3>Drag ME: I am a text!</h3>
+      </div>
+      <div class="item-img" draggable="true">
+        <img class="first_img" src="./assets/the-paris-photographer-iApVQeGr06o-unsplash.jpg"/>
+      </div>
+      <div class="item-text" draggable="true">
+          <p>Drag ME: I am a Heart Icon</p> 
+          <i class="fa fa-heart"></i>
+      </div>
+      <div class="item-img" draggable="true">
+        <img class="second_img" src="./assets/josh-hild-m9aGgc8UW6o-unsplash.jpg"/>
+      </div>
+      <div class="item-text" draggable="true">
+        <h3>Drag ME: Once again!</h3>
+      </div>
+    </div>
+    <div class="droppable" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<button class="btn-reset" onclick="reset()">Reset</button>
+
+
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+
+body,html{
+
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+      
+    
+}
+
+body{
+    background-image: url('https://w0.peakpx.com/wallpaper/944/1023/HD-wallpaper-color-distraction-abstraction-blending-gradient-soft-abstract.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+h1{
+    color: #000000;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom: 12px;
+  }
+  h1 span{
+    transition: .3s linear
+  }
+  h1:hover span:nth-child(1){
+    margin-right: 5px
+  }
+
+  h1:hover span:nth-child(2){
+    margin-left: 30px
+  }
+  h1:hover span{
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff, 
+                 0 0 40px #fff;
+  }
+
+.item-text.dragging{
+    background-color: black;
+    color: white;
+}
+
+.item-img.dragging{
+    background-color: black;
+}
+
+.item-text i{
+    color: red; 
+    padding-left: 6px;
+}
+
+
+.container {
+    display: flex;
+    
+  }
+
+  .item-text,.item-img {
+    padding: 10px;
+    background-color: #219bcb;
+    color: #090532;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.75px;
+  }
+
+  .item-text:hover{
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+     border: 1px solid #ddd;
+  }
+
+  .item-img:hover{
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+     border: 1px solid #ddd;
+  }
+  
+  .item-text p{
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 0.75px;
+  }
+
+  .draggable {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;    
+    background-color: #090532;
+    margin-right: 20px;
+    margin-left: 10px;
+    
+    
+  }
+  
+  .droppable {
+    flex: 2;
+    box-sizing: border-box;
+    background-color: #219bcb;
+    min-height: 100px;
+    border-radius: 20px;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #090532;
+    
+    
+  }
+
+  .first_img, .second_img{
+    width: auto;
+    height: 200px;
+    border-radius: 10px
+  }
+ 
+  .btn-reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: #090532;
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+   
+  }
+
+  .btn-reset:hover{
+    background-color: white;
+    color: #090532;
+    border: 0.5px solid #090532 ;
+    transition: 0.2s all ease-in-out;
+  }
+  
+
+  @media only screen and (max-width: 768px) {
+    h1 {
+      font-size: 36px;
+    }
+  
+    .container {
+      flex-direction: column;
+      height: 100vh;
+    }
+  
+    .draggable {
+      margin-right:10px;
+      margin-bottom: 20px;
+    }
+  
+    .droppable {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  
+    .first_img,
+    .second_img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .btn-reset{
+        margin-bottom: 10px;
+        margin-top: 100px;
+    }
+  }
